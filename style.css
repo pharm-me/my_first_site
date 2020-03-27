@@ -1,0 +1,37 @@
+body{
+background-image:url(webb.png);
+}
+a{
+color:white;
+}
+.header{
+color:white;
+background:#4f4b42;
+text-align: center;
+line-height:0.5;
+padding:5%;
+margin-left:20%;
+margin-right:20%;
+}
+.content{
+color:black;
+height:400px;
+background:#c9c9c9;
+text-align: left;
+line-height:1,5;
+padding:5%;
+margin-top:2%;
+margin-left:20%;
+margin-right:20%;
+}
+.contact{
+color:white;
+height:100px;
+background:#4f4561;
+text-align: right;
+line-height:1,5;
+padding:5%;
+margin-top:2%;
+margin-left:20%;
+margin-right:20%;
+}
