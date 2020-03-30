@@ -7,6 +7,10 @@ def view(r):
     index = here.parent.parent / "index2.html"
     with index.open() as f:
         return HttpResponse(f.read())
+def background(r):
+    index = here.parent.parent / "webb.png"
+    with index.open("rb") as f:
+        return HttpResponse(f.read(), content_type="image/png")
 def viewstyle(r):
     index = here.parent.parent / "style.css"
     with index.open() as f:
@@ -15,4 +19,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', view),
     path('css/', viewstyle),
+    path('img/', background),
 ]
