@@ -1,19 +1,23 @@
 body{
 background-image:url(/img/);
+font-family: 'Gotu', sans-serif;
+}
+h1,h2,h3{
+font-family: sans-serif;
 }
 a{
 color:white;
 }
-.header{
+header{
 color:white;
 background:#4f4b42;
 text-align: center;
-line-height:0.5;
+line-height:1;
 padding:5%;
-margin-left:20%;
-margin-right:20%;
+margin-left:15%;
+margin-right:15%;
 }
-.content{
+main {
 color:black;
 height:400px;
 background:#c9c9c9;
@@ -21,17 +25,17 @@ text-align: left;
 line-height:1,5;
 padding:5%;
 margin-top:2%;
-margin-left:20%;
-margin-right:20%;
+margin-left:15%;
+margin-right:15%;
 }
-.contact{
+footer{
 color:white;
-height:100px;
+height:150px;
 background:#4f4561;
 text-align: right;
 line-height:1,5;
 padding:5%;
 margin-top:2%;
-margin-left:20%;
-margin-right:20%;
+margin-left:15%;
+margin-right:15%;
 }

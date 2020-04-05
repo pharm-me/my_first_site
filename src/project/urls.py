@@ -1,12 +1,14 @@
 from pathlib import Path
 from django.contrib import admin
+from django.http import HttpRequest
 from django.http import HttpResponse
 from django.urls import path
+from django.shortcuts import render
 here = Path(__file__).parent.resolve()
-def view(r):
-    index = here.parent.parent / "index2.html"
-    with index.open() as f:
-        return HttpResponse(f.read())
+
+def view_index(request: HttpRequest) -> HttpResponse:
+    return render(request, "index.html")
+
 def background(r):
     index = here.parent.parent / "webb.png"
     with index.open("rb") as f:
@@ -17,7 +19,7 @@ def viewstyle(r):
         return HttpResponse(f.read(), content_type="text/css")
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', view),
+    path('', view_index, name="index"),
     path('css/', viewstyle),
     path('img/', background),
 ]
