@@ -1,13 +1,17 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>My Page</title>
+    <title>   {% block title %}{% endblock %}
+</title>
     <link href="https://fonts.googleapis.com/css2?family=Gotu&display=swap" rel="stylesheet">
-    <link href="/css/" rel="stylesheet" type="text/css"/>
+    <link href="{% url 'css' %}" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-<header class="header"><h1>KASHKUR YURY</h1> <h2>Pharmacologist, MD</h2>
+<header class="header">
+    <h1>KASHKUR YURY</h1>
+    <h2>Pharmacologist, MD</h2>
 </header>
 <main>
    {% block main %}{% endblock %}
