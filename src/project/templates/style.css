@@ -1,6 +1,6 @@
 {% load static %}
 body{
-background-image:url({% static 'webb.png' %});
+background-image:url({% static 'index/webb.png' %});
 font-family: 'Gotu', sans-serif;
 }
 h1,h2,h3{

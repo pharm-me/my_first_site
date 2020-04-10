@@ -1,19 +1,16 @@
-from pathlib import Path
 from django.contrib import admin
 from django.http import HttpRequest
 from django.http import HttpResponse
-from django.urls import path
+from django.urls import path, include
 from django.shortcuts import render
-here = Path(__file__).parent.resolve()
 
-def view_index(request: HttpRequest) -> HttpResponse:
-    return render(request, "index.html")
+from apps.index.views import view_index
 
 def view_css(request: HttpRequest) -> HttpResponse:
     return render(request, "style.css", content_type="text/css")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', view_index, name="index"),
+    path('', include("apps.index.urls")),
     path('css/', view_css, name="css"),
 ]
